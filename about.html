@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>My Portfolio</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("https://img.freepik.com/premium-photo/part-large-contemporary-openspace-bureau-diversity-programmers-with-row-laptops-computer-monitors-desks_236854-37228.jpg?w=740") no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+}
+
+body::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98.7vw;
+    height: 203vh;
+    background-color: rgba(23, 22, 22, 0.4);
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgba(69, 18, 116, 0.8);
+    font-family: "Poppins", sans-serif;
+    position: sticky;
+}
+
+nav .right a {
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    color: #c57aff;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: .5s;
+}
+
+nav .right a:hover,
+nav .right a#default {
+    color: white;
+}
+
+nav .right a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid white;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 1;
+    transition: .5s;
+
+}
+
+nav .right a:hover span,
+nav .right a#default span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.left {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.right li a {
+    font-size: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(61 57 70 / 0%);
+    backdrop-filter: blur(16px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.sidebar li {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.sidebar a {
+    width: 100%;
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    color: #c57aff;
+    transition: .5s;
+    margin-top: 29px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar a:hover,
+.sidebar a#default {
+    color: white;
+}
+
+.sidebar a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid white;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 1;
+    transition: .5s;
+    margin-left: 86px;
+    margin-top: 5px;
+}
+
+.sidebar a:hover span,
+.sidebar a#default span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+
+.menu-button {
+    display: none;
+    list-style: none;
+}
+
+
+.about-container {
+    width: 77vw;
+    height: 153vh;
+    margin: 88px auto;
+    backdrop-filter: blur(16px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1.1);
+    border: rgba(255, 255, 255, 0.18);
+}
+
+.section-title h2 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 2.5px;
+    display: inline-block;
+    background: rgb(159 69 243);
+    margin: 4px 10px;
+}
+
+.intro {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin: 9px 50px;
+    color: #ead1fd;
+    line-height: 28px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+    margin: 6px 0;
+    align-items: center;
+}
+
+.section>div {
+    width: 30%;
+}
+
+.leftsection {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0px 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.leftsection .skill-box {
+    width: 100%;
+    margin: 25px 0px;
+}
+
+.rightsection {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0px 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.rightsection .skill-box {
+    width: 100%;
+    margin: 25px 0px;
+}
+
+.skill-box .title {
+    display: block;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    color: #ead1fd;
+}
+
+.skill-box .skill-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-bar .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: rgb(159 69 243);
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+
+.skill-per.CSS {
+    width: 80%;
+}
+
+.skill-per.SQL {
+    width: 80%;
+}
+
+.skill-per.Python {
+    width: 60%;
+}
+
+.skill-per.Cpp {
+    width: 50%;
+}
+
+.skill-per.Cpp {
+    width: 30%;
+}
+
+.skill-per.js {
+    width: 30%;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-per .tooltip {
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #ead1fd;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgb(159 69 243);
+    z-index: 1;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    background-color: rgb(159 69 243);
+    z-index: -1;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.interest ul li {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin: 9px 50px;
+    color: #ead1fd;
+}
+
+.goals ul li {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin: 9px 50px;
+    color: #ead1fd;
+}
+
+footer {
+    background-color: rgba(69, 18, 116, 0.8);
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content a {
+    color: #c57aff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #c57aff;
+}
+
+.social-media {
+    margin-bottom: 10px;
+    color: #c57aff;
+}
+
+@media screen and (max-width: 360px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 324vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 280vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section>div {
+        width: 70%;
+    }
+
+    .sidebar {
+        z-index: 1;
+    }
+
+    .sidebar li {
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 375px) and (min-width: 361px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 351vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 302vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section>div {
+        width: 70%;
+    }
+
+    .sidebar {
+        z-index: 1;
+    }
+
+    .sidebar li {
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 390px) and (min-width: 376px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 271vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 232vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section>div {
+        width: 70%;
+    }
+
+    .sidebar {
+        z-index: 1;
+    }
+
+    .sidebar li {
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 393px) and (min-width: 391px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 270vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 232vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section>div {
+        width: 70%;
+    }
+
+    .sidebar {
+        z-index: 1;
+    }
+
+    .sidebar li {
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 414px) and (min-width: 394px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.9vw;
+        height: 248vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 212vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section>div {
+        width: 70%;
+    }
+
+    .sidebar {
+        z-index: 1;
+    }
+
+    .sidebar li {
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 549px) and (min-width: 415px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 257vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 212vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section>div {
+        width: 70%;
+    }
+
+    .sidebar {
+        z-index: 1;
+    }
+
+    .sidebar li {
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 550px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 149vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 117vh;
+        position: relative;
+        z-index: -1;
+    }
+
+}
+
+@media screen and (max-width: 820px) and (min-width: 769px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 126vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 99vh;
+        position: relative;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 912px) and (min-width: 821px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 106vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 82vh;
+        position: relative;
+        z-index: -1;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 913px) {
+    .left {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    body::before {
+        width: 99.6vw;
+        height: 239vh;
+        z-index: -1;
+    }
+
+    .about-container {
+        width: 88vw;
+        height: 184vh;
+        position: relative;
+        z-index: -1;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Shrawani</div>
+            <div class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="27px" height="27px"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a></li>
+                <a href="./index.html">Home<span></span></a>
+                <a href="./about.html" id="default">About<span></span></a>
+                <a href="./contact.html">Contact<span></span></a>
+            </div>
+            <div class="right">
+                <a href="./index.html" class="hideOnMobile" >Home<span></span></a>
+                <a href="./about.html" class="hideOnMobile" id="default">About<span></span></a>
+                <a href="./contact.html" class="hideOnMobile">Contact<span></span></a>
+            </div>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="27px" height="27px"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a></li>
+            
+        </nav>
+    </header>
+
+    <div class="about-container">
+        <div class="section-title">
+            <h2>About</h2>
+        </div>
+        <div class="intro">
+            I'm Shrawani Bhambare, a dedicated first-year Bsc computer science student at B.K. Birla College. My journey
+            in
+            the world of technology has just begun, but I am fueled by a passion for coding, problem-solving, and
+            learning new things every day. I’m currently building a foundation in programming with Python and exploring
+            various aspects of computer science.I aim to apply my knowledge to solve real-world problems and contribute
+            to the tech community.
+        </div>
+
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+        <main>
+            <section class="section">
+                <div class="leftsection">
+                    <div class="skill-box">
+                        <span class="title">HTML</span>
+                        <div class="skill-bar">
+                            <span class="skill-per">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="title">CSS</span>
+                        <div class="skill-bar">
+                            <span class="skill-per CSS">
+                                <span class="tooltip">80%</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="title">SQL</span>
+                        <div class="skill-bar">
+                            <span class="skill-per SQL">
+                                <span class="tooltip">80%</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="rightsection">
+                    <div class="skill-box">
+                        <span class="title">Python</span>
+                        <div class="skill-bar">
+                            <span class="skill-per Python">
+                                <span class="tooltip">60%</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="title">C++</span>
+                        <div class="skill-bar">
+                            <span class="skill-per Cpp">
+                                <span class="tooltip">30%</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <span class="title">JS</span>
+                        <div class="skill-bar">
+                            <span class="skill-per js">
+                                <span class="tooltip">30%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="section-title">
+            <h2>Interest</h2>
+        </div>
+        <div class="interest">
+            <ul>
+                <li>Web Development: Learning how to build and design websites</li>
+                <li>Data Science: Exploring data analysis and visualization techniques</li>
+                <li>Artificial Intelligence: Understanding the basics of machine learning and AI</li>
+            </ul>
+        </div>
+
+        <div class="section-title">
+            <h2>Goals</h2>
+        </div>
+        <div class="goals">
+            <ul>
+                <li>Short-Term: Build a personal website to showcase my learning journey and projects</li>
+                <li>Long-Term: Develop a strong foundation in computer science to pursue a career in software
+                    development or data science</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/shrawani-bhambare-98881128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank">LinkedIn</a> |
+                <a href="https://github.com/Shrawanib06" target="_blank">GitHub</a>
+            </div>
+            <div class="copyright">
+                <p>© Shrawani Bhambare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+</body>
+
+</html>
