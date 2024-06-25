@@ -34,7 +34,7 @@
             top: 0;
             left: 0;
             width: 98.7vw;
-            height: 203vh;
+            height: 207vh;
             background-color: rgba(23, 22, 22, 0.4);
             z-index: -1;
         }
@@ -278,19 +278,15 @@
         }
 
         .skill-per.Python {
-            width: 60%;
+            width: 70%;
         }
 
         .skill-per.Cpp {
-            width: 50%;
-        }
-
-        .skill-per.Cpp {
-            width: 30%;
+            width: 40%;
         }
 
         .skill-per.js {
-            width: 30%;
+            width: 40%;
         }
 
         @keyframes progress {
@@ -376,6 +372,11 @@
             color: #c57aff;
         }
 
+        .social {
+            margin-bottom: 10px;
+            color: #c57aff;
+        }
+
         @media screen and (max-width: 360px) {
             .left {
                 font-size: 17px;
@@ -383,8 +384,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 324vh;
+                width: 99.9vw;
+                height: 328vh;
                 z-index: -1;
             }
 
@@ -395,8 +396,13 @@
                 z-index: -1;
             }
 
-            .section-title h2::after {
+            .section-title .interest-line::after {
+                content: "";
                 width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
             }
 
             .section {
@@ -434,7 +440,7 @@
 
             body::before {
                 width: 100vw;
-                height: 351vh;
+                height: 355vh;
                 z-index: -1;
             }
 
@@ -445,8 +451,13 @@
                 z-index: -1;
             }
 
-            .section-title h2::after {
+            .section-title .interest-line::after {
+                content: "";
                 width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
             }
 
             .section {
@@ -483,8 +494,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 271vh;
+                width: 99.9vw;
+                height: 274vh;
                 z-index: -1;
             }
 
@@ -495,8 +506,13 @@
                 z-index: -1;
             }
 
-            .section-title h2::after {
+            .section-title .interest-line::after {
+                content: "";
                 width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
             }
 
             .section {
@@ -533,8 +549,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 270vh;
+                width: 99.9vw;
+                height: 273.5vh;
                 z-index: -1;
             }
 
@@ -545,8 +561,13 @@
                 z-index: -1;
             }
 
-            .section-title h2::after {
+            .section-title .interest-line::after {
+                content: "";
                 width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
             }
 
             .section {
@@ -584,7 +605,7 @@
 
             body::before {
                 width: 99.9vw;
-                height: 248vh;
+                height: 251.5vh;
                 z-index: -1;
             }
 
@@ -595,8 +616,13 @@
                 z-index: -1;
             }
 
-            .section-title h2::after {
+            .section-title .interest-line::after {
+                content: "";
                 width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
             }
 
             .section {
@@ -644,8 +670,13 @@
                 z-index: -1;
             }
 
-            .section-title h2::after {
+            .section-title .interest-line::after {
+                content: "";
                 width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
             }
 
             .section {
@@ -681,8 +712,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 149vh;
+                width: 100vw;
+                height: 151.5vh;
                 z-index: -1;
             }
 
@@ -702,8 +733,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 126vh;
+                width: 99.9vw;
+                height: 129vh;
                 z-index: -1;
             }
 
@@ -722,8 +753,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 106vh;
+                width: 99.9vw;
+                height: 108vh;
                 z-index: -1;
             }
 
@@ -743,8 +774,8 @@
             }
 
             body::before {
-                width: 99.6vw;
-                height: 239vh;
+                width: 99.9vw;
+                height: 243vh;
                 z-index: -1;
             }
 
@@ -755,6 +786,27 @@
                 z-index: -1;
             }
 
+        }
+
+        @media screen and (max-width: 1280px) and (min-width: 1025px) {
+            .left {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            body::before {
+                width: 100vw;
+                height: 173vh;
+                z-index: -1;
+            }
+
+            .about-container {
+                width: 88vw;
+                height: 129vh;
+                position: relative;
+                z-index: -1;
+            }
+        
         }
     </style>
 </head>
@@ -769,14 +821,14 @@
                             <path fill="#ffffff"
                                 d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                         </svg></a></li>
-                <a href="./index.html">Home<span></span></a>
-                <a href="./about.html" id="default">About<span></span></a>
-                <a href="./contact.html">Contact<span></span></a>
+                <a href="/home.html">Home<span></span></a>
+                <a href="/about.html" id="default">About<span></span></a>
+                <a href="/contact.html">Contact<span></span></a>
             </div>
             <div class="right">
-                <a href="./index.html" class="hideOnMobile">Home<span></span></a>
-                <a href="./about.html" class="hideOnMobile" id="default">About<span></span></a>
-                <a href="./contact.html" class="hideOnMobile">Contact<span></span></a>
+                <a href="/home.html" class="hideOnMobile">Home<span></span></a>
+                <a href="/about.html" class="hideOnMobile" id="default">About<span></span></a>
+                <a href="/contact.html" class="hideOnMobile">Contact<span></span></a>
             </div>
             <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512" width="27px" height="27px">
@@ -792,12 +844,11 @@
             <h2>About</h2>
         </div>
         <div class="intro">
-            I'm Shrawani Bhambare, a dedicated first-year Bsc computer science student at B.K. Birla College. My journey
-            in
-            the world of technology has just begun, but I am fueled by a passion for coding, problem-solving, and
-            learning new things every day. I’m currently building a foundation in programming with Python and exploring
-            various aspects of computer science.I aim to apply my knowledge to solve real-world problems and contribute
-            to the tech community.
+            I'm Shrawani Bhambare, a dedicated second-year B.Sc. Computer Science student at B.K. Birla College. My
+            journey in the world of technology is well underway, driven by a passion for coding, problem-solving, and
+            continuous learning. I am currently deepening my programming skills with Python and exploring various
+            aspects of computer science. I aim to apply my knowledge to solve real-world problems and contribute to the
+            tech community.
         </div>
 
         <div class="section-title">
@@ -839,7 +890,7 @@
                         <span class="title">Python</span>
                         <div class="skill-bar">
                             <span class="skill-per Python">
-                                <span class="tooltip">60%</span>
+                                <span class="tooltip">70%</span>
                             </span>
                         </div>
                     </div>
@@ -848,7 +899,7 @@
                         <span class="title">C++</span>
                         <div class="skill-bar">
                             <span class="skill-per Cpp">
-                                <span class="tooltip">30%</span>
+                                <span class="tooltip">40%</span>
                             </span>
                         </div>
                     </div>
@@ -857,7 +908,7 @@
                         <span class="title">JS</span>
                         <div class="skill-bar">
                             <span class="skill-per js">
-                                <span class="tooltip">30%</span>
+                                <span class="tooltip">40%</span>
                             </span>
                         </div>
                     </div>
@@ -866,11 +917,11 @@
         </main>
 
         <div class="section-title">
-            <h2>Interest</h2>
+            <h2 class="interest-line">Interest</h2>
         </div>
         <div class="interest">
             <ul>
-                <li>Web Development: Learning how to build and design websites</li>
+                <li>Web Development: Enhancing my skills in building and designing websites</li>
                 <li>Data Science: Exploring data analysis and visualization techniques</li>
                 <li>Artificial Intelligence: Understanding the basics of machine learning and AI</li>
             </ul>
@@ -881,7 +932,8 @@
         </div>
         <div class="goals">
             <ul>
-                <li>Short-Term: Build a personal website to showcase my learning journey and projects</li>
+                <li>Short-Term: Continue developing my personal website to showcase my learning journey and projects
+                </li>
                 <li>Long-Term: Develop a strong foundation in computer science to pursue a career in software
                     development or data science</li>
             </ul>
@@ -890,6 +942,9 @@
 
     <footer>
         <div class="footer-content">
+            <div class="social">
+                Get in Touch
+            </div>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/shrawani-bhambare-98881128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank">LinkedIn</a> |
