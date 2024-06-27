@@ -330,7 +330,7 @@
             color: #c57aff;
         }
 
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 280px) {
             .left {
                 font-size: 17px;
                 letter-spacing: 1px;
@@ -338,13 +338,98 @@
 
             body::before {
                 width: 99.9vw;
-                height: 166vh;
+                height: 189vh;
                 z-index: -1;
             }
 
             .contact-container {
                 width: 88vw;
-                height: 118vh;
+                height: 135vh;
+                position: relative;
+                z-index: 1;
+            }
+
+            .contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 80vh;
+            }
+
+            .contact form {
+                width: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            form .input-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .input-box .input-field {
+                width: 113%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .textarea-field {
+                width: 70.5%;
+            }
+
+            form .textarea-field {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            form .textarea-field .item {
+                height: 128px;
+            }
+
+            .sidebar {
+                height: 100vh;
+                width: 250px;
+                z-index: -1;
+            }
+
+            .sidebar li {
+                margin-top: 22px;
+                margin-left: 20px;
+            }
+
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 360px) and (min-width: 281px) {
+            .left {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            body::before {
+                width: 99.9vw;
+                height: 173vh;
+                z-index: -1;
+            }
+
+            .contact-container {
+                width: 88vw;
+                height: 125vh;
                 position: relative;
                 z-index: 1;
             }
@@ -420,13 +505,13 @@
 
             body::before {
                 width: 100vw;
-                height: 186vh;
+                height: 194vh;
                 z-index: -1;
             }
 
             .contact-container {
                 width: 88vw;
-                height: 133vh;
+                height: 141vh;
                 position: relative;
                 z-index: 1;
             }
@@ -502,7 +587,169 @@
 
             body::before {
                 width: 99.9vw;
-                height: 145vh;
+                height: 150vh;
+                z-index: -1;
+            }
+
+            .contact-container {
+                width: 88vw;
+                height: 108vh;
+                position: relative;
+                z-index: 1;
+            }
+
+            .contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 80vh;
+            }
+
+            .contact form {
+                width: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            form .input-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .input-box .input-field {
+                width: 113%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .textarea-field {
+                width: 70.5%;
+            }
+
+            form .textarea-field {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .sidebar {
+                height: 100vh;
+                width: 250px;
+                z-index: -1;
+            }
+
+            .sidebar li {
+                margin-top: 22px;
+                margin-left: 20px;
+            }
+
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 393px) and (min-width: 391px) {
+            .left {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            body::before {
+                width: 99.9vw;
+                height: 149vh;
+                z-index: -1;
+            }
+
+            .contact-container {
+                width: 88vw;
+                height: 107vh;
+                position: relative;
+                z-index: 1;
+            }
+
+            .contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 80vh;
+            }
+
+            .contact form {
+                width: 600px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            form .input-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .input-box .input-field {
+                width: 113%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .textarea-field {
+                width: 70.5%;
+            }
+
+            form .textarea-field {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .sidebar {
+                height: 100vh;
+                width: 250px;
+                z-index: -1;
+            }
+
+            .sidebar li {
+                margin-top: 22px;
+                margin-left: 20px;
+            }
+
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 414px) and (min-width: 394px) {
+            .left {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            body::before {
+                width: 99.9vw;
+                height: 142vh;
                 z-index: -1;
             }
 
@@ -575,30 +822,30 @@
             }
         }
 
-        @media screen and (max-width: 414px) and (min-width: 391px) {
+        @media screen and (max-width: 540px) and (min-width: 415px) {
             .left {
                 font-size: 17px;
                 letter-spacing: 1px;
             }
 
             body::before {
-                width: 99.9vw;
-                height: 135.5vh;
+                width: 100vw;
+                height: 138vh;
                 z-index: -1;
             }
 
             .contact-container {
                 width: 88vw;
-                height: 96vh;
+                height: 89vh;
                 position: relative;
-                z-index: 1;
+                z-index: -1;
             }
 
             .contact {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-height: 80vh;
+                min-height: 55vh;
             }
 
             .contact form {
@@ -612,17 +859,14 @@
 
             form .input-box {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
+                justify-content: space-between;
             }
 
             .input-box .input-field {
-                width: 113%;
+                width: 45.5%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column;
             }
 
             .textarea-field {
@@ -633,30 +877,27 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column;
             }
 
-            .sidebar {
-                height: 100vh;
-                width: 250px;
-                z-index: -1;
+            form .textarea-field .item {
+                width: 263px;
+                height: 90px;
             }
 
-            .sidebar li {
-                margin-top: 22px;
-                margin-left: 20px;
-            }
-
-            .hideOnMobile {
-                display: none;
-            }
-
-            .menu-button {
-                display: block;
+            .field .item {
+                width: 75%;
+                padding: 18px;
+                background: transparent;
+                border: 2px solid rgb(159 69 243);
+                outline: none;
+                border-radius: 6px;
+                font-size: 16px;
+                color: #ededed;
+                margin: 12px 0;
             }
         }
 
-        @media screen and (max-width: 768px) and (min-width: 415px) {
+        @media screen and (max-width: 768px) and (min-width: 541px) {
             .left {
                 font-size: 17px;
                 letter-spacing: 1px;

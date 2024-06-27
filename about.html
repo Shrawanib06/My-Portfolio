@@ -377,7 +377,7 @@
             color: #c57aff;
         }
 
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 280px) {
             .left {
                 font-size: 17px;
                 letter-spacing: 1px;
@@ -385,13 +385,68 @@
 
             body::before {
                 width: 99.9vw;
-                height: 328vh;
+                height: 493vh;
                 z-index: -1;
             }
 
             .about-container {
                 width: 88vw;
-                height: 280vh;
+                height: 439vh;
+                position: relative;
+                z-index: -1;
+                font-size: 20px;
+            }
+
+            .section-title .interest-line::after {
+                content: "";
+                width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
+            }
+
+            .section {
+                flex-direction: column;
+            }
+
+            .section>div {
+                width: 70%;
+            }
+
+            .sidebar {
+                z-index: 1;
+            }
+
+            .sidebar li {
+                margin-top: 22px;
+                margin-left: 20px;
+            }
+
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 360px) and (min-width: 281px) {
+            .left {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            body::before {
+                width: 100vw;
+                height: 335vh;
+                z-index: -1;
+            }
+
+            .about-container {
+                width: 88vw;
+                height: 287vh;
                 position: relative;
                 z-index: -1;
             }
@@ -440,13 +495,13 @@
 
             body::before {
                 width: 100vw;
-                height: 355vh;
+                height: 362vh;
                 z-index: -1;
             }
 
             .about-container {
                 width: 88vw;
-                height: 302vh;
+                height: 309vh;
                 position: relative;
                 z-index: -1;
             }
@@ -495,13 +550,13 @@
 
             body::before {
                 width: 99.9vw;
-                height: 274vh;
+                height: 280vh;
                 z-index: -1;
             }
 
             .about-container {
                 width: 88vw;
-                height: 232vh;
+                height: 238vh;
                 position: relative;
                 z-index: -1;
             }
@@ -550,13 +605,13 @@
 
             body::before {
                 width: 99.9vw;
-                height: 273.5vh;
+                height: 278vh;
                 z-index: -1;
             }
 
             .about-container {
                 width: 88vw;
-                height: 232vh;
+                height: 236vh;
                 position: relative;
                 z-index: -1;
             }
@@ -651,7 +706,61 @@
             }
         }
 
-        @media screen and (max-width: 549px) and (min-width: 415px) {
+        @media screen and (max-width: 540px) and (min-width: 415px) {
+            .left {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            body::before {
+                width: 99.6vw;
+                height: 274vh;
+                z-index: -1;
+            }
+
+            .about-container {
+                width: 88vw;
+                height: 225vh;
+                position: relative;
+                z-index: -1;
+            }
+
+            .section-title .interest-line::after {
+                content: "";
+                width: 100px;
+                height: 2.5px;
+                display: inline-block;
+                background: rgb(159 69 243);
+                margin: 4px 10px;
+            }
+
+            .section {
+                flex-direction: column;
+            }
+
+            .section>div {
+                width: 70%;
+            }
+
+            .sidebar {
+                z-index: 1;
+            }
+
+            .sidebar li {
+                margin-top: 22px;
+                margin-left: 20px;
+            }
+
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 549px) and (min-width: 541px) {
             .left {
                 font-size: 17px;
                 letter-spacing: 1px;
@@ -806,7 +915,6 @@
                 position: relative;
                 z-index: -1;
             }
-        
         }
     </style>
 </head>
