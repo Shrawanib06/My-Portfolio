@@ -1,14 +1,17 @@
 const form = document.querySelector("form");
+if (!form) {
+    console.error("Contact form not found on this page.");
+}
 
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const subject = document.getElementById("subject");
-const message = document.getElementById("message");
+const messageInput = document.getElementById("message");
 
 function sendEmail() {
 
-    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Subject: ${subject.value}<br> Message: ${message.value}`;
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Subject: ${subject.value}<br> Message: ${messageInput.value}`;
 
     Email.send({
         SecureToken: "ce96852c-9d74-44f1-ace4-cb0cdfb63c42",
@@ -19,24 +22,21 @@ function sendEmail() {
         From: "bhambareshrawani06@gmail.com",
         Subject: subject.value,
         Body: bodyMessage
-    }).then(
-        message => {
-            if (message == "OK") {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Message sent successfully!",
-                    icon: "success"
-                });
-            }
-            else {
-                Swal.fire({
-                    title: "Error!",
-                    text: "Failed to send message!",
-                    icon: "error"
-                });
-            }
+    }).then(result => {
+        if (result === "OK") {
+            Swal.fire({
+                title: "Success!",
+                text: "Message sent successfully!",
+                icon: "success"
+            });
+        } else {
+            Swal.fire({
+                title: "Error!",
+                text: "Failed to send message!",
+                icon: "error"
+            });
         }
-    );
+    });
 }
 
 function checkInputs() {
@@ -93,7 +93,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkInputs();
 
-    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !subject.classList.contains("error") && !message.classList.contains("error")) {
+    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !subject.classList.contains("error") && !messageInput.classList.contains("error")) {
 
         sendEmail();
 
